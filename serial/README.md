@@ -1,21 +1,22 @@
 # Projeto PCD – K-Means 1D com Paralelização Progressiva - Serial
 
-## 🚀 Execução no Google Colab
-Para rodar este projeto no **Google Colab**:
+## 🚀 Execução em Ambiente Windows (Local)
+Para rodar este projeto em sua máquina local (Windows):
 
-1. Acesse o link do notebook:
-   [Abrir no Google Colab](https://colab.research.google.com/drive/184bgv1JuWvcVZxaUuAiY-frUrrQcwOoN?usp=sharing)
+1. **Pré-requisitos**:
+   - Compilador GCC instalado (recomendado MinGW-w64).
+   - Python 3.x e Jupyter Notebook (ou VS Code com extensão Jupyter).
 
-2. Ou abra manualmente:
-   - Vá para [Google Colab](https://colab.research.google.com/)
-   - Clique em **Arquivo → Abrir notebook**
-   - Vá na aba **GitHub**
-   - Cole a URL do repositório deste projeto
-   - Selecione o notebook `.ipynb` (ex: `ProjetoPCD-kmeans.ipynb`)
+2. **Compilação e Execução**:
+   - Abra o notebook `Serial_kmeans.ipynb` no VS Code ou Jupyter Lab.
+   - O notebook contém comandos para compilar e executar o código C.
+   - O comando de compilação típico (via célula de código) será:
+     ```python
+     !gcc -o kmeans_serial kmeans_1d_naive.c
+     ```
+   - Em seguida, o código é executado chamando o binário gerado (ex: `!kmeans_serial.exe`).
 
-3. No Colab, execute as células **de cima para baixo**, garantindo:
-   - Ambiente Linux padrão (CPU/GPU, conforme o experimento)
-   - Permissão de execução de shell (códigos `%%shell`)
+> **Nota:** Certifique-se de que o `gcc` está no PATH do seu sistema.
 
 ## 📈 Saídas
 - Métricas de tempo e SSE por iteração
